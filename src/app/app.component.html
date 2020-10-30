@@ -1,0 +1,136 @@
+<!--<table width="368" height="368" style="border: 1px solid rgb(95, 94, 94)"> 
+  <tr *ngFor="let item of arrayOne(7); let i = 'index+1';">
+    <div class="row" id="row{{i}}">        
+      <td style="border-collapse: collapse;" *ngFor="let item of arrayOne(7); let p='index+1';">
+        <tr>
+        <canvas class="column" id='cell{{i}}{{p}}' width="40" height="40" style="border:1px solid rgba(128, 124, 124, 0.87);"></canvas>
+        <span>'cell{{i}}{{p}}'</span>
+        </tr>    
+      </td>
+    </div>
+  </tr>
+</table>-->
+
+<!--<canvas #game width="640" height="480" style="border: 1px solid black"></canvas> -->
+<!--<table width="12" height="60" style="border: 1px solid rgb(95, 94, 94)"> 
+  <tr *ngFor="let item of arrayOne(6); let i = 'index+1';">
+        <canvas id='q{{i}}' width="10" height="10" style="background-color: #c20b14; border:1px solid black;"></canvas>
+  </tr>
+</table>-->
+<!--<canvas class="column1" id='1' (click)="check_play_clk(74)" style="border:1px solid black"></canvas>
+<canvas class="column1" id='2' (click)="check_play_clk(75)" style="border:1px solid black"></canvas>-->
+<ul id="Player">Welcome Player{{playername+1}}!</ul>
+<ul *ngIf="winplay">Player{{winplay+1}} Wins!!</ul>
+
+<td id="tb1" width="368" height="368" style="border: 1px solid rgb(95, 94, 94)">
+  <div class="row" id="row1">
+    <canvas class="column" id="11"  width="40" height="40" style="border:1px solid rgba(128, 124, 124, 0.87);"></canvas>
+    <canvas class="column" id="12" width="40" height="40" style="border:1px solid rgba(128, 124, 124, 0.87);"></canvas>
+    <canvas class="column" id="13" width="40" height="40" style="border:1px solid rgba(128, 124, 124, 0.87);"></canvas>
+    <canvas class="column" id="14"  width="40" height="40" style="background-color:rgba(238, 236, 98, 0.877);border:1px solid rgba(128, 124, 124, 0.87);"></canvas>
+    <canvas class="column" id="15" width="40" height="40" style="border:1px solid rgba(128, 124, 124, 0.87);"></canvas>
+    <canvas class="column" id="16" width="40" height="40" style="border:1px solid rgba(128, 124, 124, 0.87);"></canvas>
+    <canvas class="column" id="17" width="40" height="40" style="border:1px solid rgba(128, 124, 124, 0.87);"></canvas>
+  </div>
+  <div class="row" id="row2">
+    <canvas class="column" id="21"  width="40" height="40" style="border:1px solid rgba(128, 124, 124, 0.87);"></canvas>
+    <canvas class="column" id="22" width="40" height="40" style="background-color:rgba(128, 228, 121, 0.877);border:1px solid rgba(128, 124, 124, 0.87);"></canvas>
+    <canvas class="column" id="23" width="40" height="40" style="border:1px solid rgba(128, 124, 124, 0.87);"></canvas>
+    <canvas class="column" id="24"  width="40" height="40" style="border:1px solid rgba(128, 124, 124, 0.87);"></canvas>
+    <canvas class="column" id="25" width="40" height="40" style="border:1px solid rgba(128, 124, 124, 0.87);"></canvas>
+    <canvas class="column" id="26" width="40" height="40" style="background-color:rgba(238, 236, 98, 0.877);border:1px solid rgba(128, 124, 124, 0.87);"></canvas>
+    <canvas class="column" id="27" width="40" height="40" style="border:1px solid rgba(128, 124, 124, 0.87);"></canvas>
+  </div>
+  <div class="row" id="row3">
+    <canvas class="column" id="31"  width="40" height="40" style="border:1px solid rgba(128, 124, 124, 0.87);"></canvas>
+    <canvas class="column" id="32" width="40" height="40" style="border:1px solid rgba(128, 124, 124, 0.87);"></canvas>
+    <canvas class="column" id="33" width="40" height="40" style="border:1px solid rgba(128, 124, 124, 0.87);"></canvas>
+    <canvas class="column" id="34"  width="40" height="40" style="border:1px solid rgba(128, 124, 124, 0.87);"></canvas>
+    <canvas class="column" id="35" width="40" height="40" style="border:1px solid rgba(128, 124, 124, 0.87);"></canvas>
+    <canvas class="column" id="36" width="40" height="40" style="border:1px solid rgba(128, 124, 124, 0.87);"></canvas>
+    <canvas class="column" id="37" width="40" height="40" style="border:1px solid rgba(128, 124, 124, 0.87);"></canvas>
+  </div>
+  <div class="row" id="row4">
+    <canvas class="column" id="41"  width="40" height="40" style="background-color:rgba(128, 228, 121, 0.877);border:1px solid rgba(128, 124, 124, 0.87);"></canvas>
+    <canvas class="column" id="42" width="40" height="40" style="border:1px solid rgba(128, 124, 124, 0.87);"></canvas>
+    <canvas class="column" id="43" width="40" height="40" style="border:1px solid rgba(128, 124, 124, 0.87);"></canvas>
+    <canvas class="column" id="44"  width="40" height="40" style="border:1px solid rgba(128, 124, 124, 0.87);"></canvas>
+    <canvas class="column" id="45" width="40" height="40" style="border:1px solid rgba(128, 124, 124, 0.87);"></canvas>
+    <canvas class="column" id="46" width="40" height="40" style="border:1px solid rgba(128, 124, 124, 0.87);"></canvas>
+    <canvas class="column" id="47" width="40" height="40" style="background-color:rgba(230, 109, 109, 0.877);border:1px solid rgba(128, 124, 124, 0.87);"></canvas>
+  </div>
+  <div class="row" id="row5">
+    <canvas class="column" id="51"  width="40" height="40" style="border:1px solid rgba(128, 124, 124, 0.87);"></canvas>
+    <canvas class="column" id="52" width="40" height="40" style="border:1px solid rgba(128, 124, 124, 0.87);"></canvas>
+    <canvas class="column" id="53" width="40" height="40" style="border:1px solid rgba(128, 124, 124, 0.87);"></canvas>
+    <canvas class="column" id="54"  width="40" height="40" style="border:1px solid rgba(128, 124, 124, 0.87);"></canvas>
+    <canvas class="column" id="55" width="40" height="40" style="border:1px solid rgba(128, 124, 124, 0.87);"></canvas>
+    <canvas class="column" id="56" width="40" height="40" style="border:1px solid rgba(128, 124, 124, 0.87);"></canvas>
+    <canvas class="column" id="57" width="40" height="40" style="border:1px solid rgba(128, 124, 124, 0.87);"></canvas>
+  </div>
+  <div class="row" id="row6">
+    <canvas class="column" id="61"  width="40" height="40" style="border:1px solid rgba(128, 124, 124, 0.87);"></canvas>
+    <canvas class="column" id="62" width="40" height="40" style="background-color:rgba(127, 109, 230, 0.877);border:1px solid rgba(128, 124, 124, 0.87);"></canvas>
+    <canvas class="column" id="63" width="40" height="40" style="border:1px solid rgba(128, 124, 124, 0.87);"></canvas>
+    <canvas class="column" id="64"  width="40" height="40" style="border:1px solid rgba(128, 124, 124, 0.87);"></canvas>
+    <canvas class="column" id="65" width="40" height="40" style="border:1px solid rgba(128, 124, 124, 0.87);"></canvas>
+    <canvas class="column" id="66" width="40" height="40" style="background-color:rgba(230, 109, 109, 0.877);border:1px solid rgba(128, 124, 124, 0.87);"></canvas>
+    <canvas class="column" id="67" width="40" height="40" style="border:1px solid rgba(128, 124, 124, 0.87);"></canvas>
+  </div>
+  <div class="row" id="row7">
+    <canvas class="column" id="71"  width="40" height="40" style="border:1px solid rgba(128, 124, 124, 0.87);"></canvas>
+    <canvas class="column" id="72" width="40" height="40" style="border:1px solid rgba(128, 124, 124, 0.87);"></canvas>
+    <canvas class="column" id="73" width="40" height="40" style="border:1px solid rgba(128, 124, 124, 0.87);"></canvas>
+    <canvas class="column" id="74" width="40" height="40" style="background-color:rgba(127, 109, 230, 0.877); border:1px solid rgba(128, 124, 124, 0.87);"></canvas>
+    <canvas class="column" id="75" (click)="check_play_clk(75)" width="40" height="40" style="border:1px solid rgba(128, 124, 124, 0.87);"></canvas>
+    <canvas class="column" id="76" (click)="check_play_clk(76)" width="40" height="40" style="border:1px solid rgba(128, 124, 124, 0.87);"></canvas>
+    <canvas class="column" id="77" width="40" height="40" style="border:1px solid rgba(128, 124, 124, 0.87);"></canvas>
+  </div>
+</td>
+<!--<table width="12" height="60" style="border: 1px solid rgb(95, 94, 94)"> 
+  <tr *ngFor="let item of arrayOne(6); let i = 'index+1';">
+        <canvas id='q{{i}}' width="10" height="10" style="background-color: #c20b14; border:1px solid black;"></canvas>
+  </tr>
+</table>-->
+<!--<canvas #game width="640" height="480" style="border: 1px solid black"></canvas>-->
+<BR><BR>
+
+  <table width="80" height="12" style="border: 1px solid rgb(95, 94, 94)"> 
+    <td *ngFor="let item of arrayOne(6); let i = 'index+1';">
+          <canvas id='p{{i}}' width="10" height="10" style="background-color: #13118a; border:1px solid black;"></canvas>
+    </td>
+  </table>
+
+  <span id="events"></span>
+
+
+  <p *ngIf="playername==0">
+    <button id="play0" (click)="move(0,0,0,0,0,0)" disabled="{{play_but0}}" >Play</button>
+  </p>
+  <p *ngIf="playername==1">
+    <button id="play1" (click)="move(0,0,0,0,0,0)" disabled="{{play_but1}}" >Play</button>
+  </p>
+  <p *ngIf="playername==2">
+    <button id="play2" (click)="move(0,0,0,0,0,0)" disabled="{{play_but2}}" >Play</button>
+  </p>
+  <p *ngIf="playername==3">
+    <button id="play3" (click)="move(0,0,0,0,0,0)" disabled="{{play_but3}}">Play</button>
+  </p>
+  <button id="clear1" (click)="clear('1')" >Click</button>
+  <button id="clear" (click)="clear('2')" >Reset</button>
+
+  <button id="start" >start</button>
+<button id="stop">stop</button>
+<div id="time"></div>
+
+  <!--<button id="clar1" (click)="changePosition('open')" >Click animate</button>
+  <button id="clar" (click)="changePosition('closed')" >Reset animate</button>
+  <canvas @check class="open-close-container" width="150" height="80" style="border:1px solid rgba(128, 124, 124, 0.87);"></canvas>
+  <canvas [@openClose]="'canvas'" class="open-close-container" (click)="changePosition('open')" width="250" height="160" style="border:1px solid rgba(128, 124, 124, 0.87);"></canvas>
+
+  <div [@openClose]="isOpen ? 'open' : 'closed'" class="open-close-container">
+    
+    <p>The box is now {{ isOpen ? 'Open' : 'Closed' }}!</p>
+  </div>-->
+
+  <script src="/src/custom.js"></script>
